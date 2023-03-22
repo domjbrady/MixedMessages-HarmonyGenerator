@@ -41,10 +41,13 @@ const bridgeGenerator = (bridgeLength) => {
 
 const tuneGenerator = (verseLength, chorusLength, bridgeLength) => {
     return `Your Composition:
+
     ${verseGenerator(verseLength)}
+
     ${chorusGenerator(chorusLength)}
+    
     ${bridgeGenerator(bridgeLength)}
     `
 }
 
-console.log(tuneGenerator(4,4,4))
+console.log(tuneGenerator(5,7,2))
