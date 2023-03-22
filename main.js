@@ -30,7 +30,6 @@ const chorusGenerator = (chorusLength) => {
     const chorus = chorusArr.join("  ");
     return `CHORUS: ${chorus}`
 }
-
 const bridgeGenerator = (bridgeLength) => {
     const bridgeArr = [];
     for (let i = 0; i <= bridgeLength - 1; i++){
@@ -39,3 +38,13 @@ const bridgeGenerator = (bridgeLength) => {
     const bridge = bridgeArr.join("  ");
     return `BRIDGE: ${bridge}`
 }
+
+const tuneGenerator = (verseLength, chorusLength, bridgeLength) => {
+    return `Your Composition:
+    ${verseGenerator(verseLength)}
+    ${chorusGenerator(chorusLength)}
+    ${bridgeGenerator(bridgeLength)}
+    `
+}
+
+console.log(tuneGenerator(4,4,4))
