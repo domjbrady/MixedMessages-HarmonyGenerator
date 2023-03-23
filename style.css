@@ -21,6 +21,7 @@ fieldset{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 2rem;
     border: 1px solid #ccc;
     padding: 1rem;
@@ -40,14 +41,36 @@ legend{
 
 label {
     color: white;
+    text-align: center;
+    font-weight: bold;
 }
 input {
-    background-color: beige;
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
 }
 
+
 button {
-    max-width: 500px;
-    background-color: beige;
+    border-radius: 5rem;
+    border: 1px solid black;
+    padding: 0.5rem;
+    background-color: white;
+    font-size: 1rem;
+    width: 50%;
+    font-weight: bold;
+
+}
+
+button:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    transition-duration: 0.3s;
 }
 
 .output-header{
@@ -82,7 +105,7 @@ button {
 .output-box {
     margin-left: 2rem;
     font-style: italic;
-    font-weight: bold;
+    font-weight: lighter;
 }
 
 

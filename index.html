@@ -14,13 +14,13 @@
         <fieldset>
         <legend>Harmony Generator</legend>
         <label for="verse-length">Verse Length:</label>
-        <input type="number" id="verse-length" name="verse-length" class="table-element" required>
+        <input type="number" id="verse-length" name="verse-length" class="table-element" min="0" required>
         <br>
         <label for="chorus-length">Chorus Length:</label>
-        <input type="number" id="chorus-length" name="chorus-length" class="table-element" required>
+        <input type="number" id="chorus-length" name="chorus-length" class="table-element" min="0"  required>
         <br>
         <label for="bridge-length">Bridge Length:</label>
-        <input type="number" id="bridge-length" name="bridge-length" class="table-element" required>
+        <input type="number" id="bridge-length" name="bridge-length" class="table-element" min="0"  required>
         <br>
         <button type="reset" onclick="resetTune()">Reset</button>
         <br>
