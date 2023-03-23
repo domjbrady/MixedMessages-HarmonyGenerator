@@ -1,5 +1,4 @@
 //MIXED MESSAGES PORTFOLIO PROJECT
-
 const randomTone = () => {
     const tones = ["C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B"];
     return tones[Math.floor(Math.random()*12)]
@@ -20,7 +19,7 @@ const verseGenerator = (verseLength) => {
         verseArr.push(chordGenerator())
     }
     const verse = verseArr.join("  ");
-    return `VERSE: ${verse}`
+    return verse
 }
 const chorusGenerator = (chorusLength) => {
     const chorusArr = [];
@@ -28,7 +27,7 @@ const chorusGenerator = (chorusLength) => {
         chorusArr.push(chordGenerator())
     }
     const chorus = chorusArr.join("  ");
-    return `CHORUS: ${chorus}`
+    return chorus
 }
 const bridgeGenerator = (bridgeLength) => {
     const bridgeArr = [];
@@ -36,7 +35,7 @@ const bridgeGenerator = (bridgeLength) => {
         bridgeArr.push(chordGenerator())
     }
     const bridge = bridgeArr.join("  ");
-    return `BRIDGE: ${bridge}`
+    return bridge
 }
 
 
@@ -64,4 +63,10 @@ function generateTune(){
     generateVerse();
     generateChorus()
     generateBridge();
+}
+
+function resetTune() {
+    document.getElementById("verse-output").innerHTML = "";
+    document.getElementById("chorus-output").innerHTML = "";
+    document.getElementById("bridge-output").innerHTML = "";
 }
