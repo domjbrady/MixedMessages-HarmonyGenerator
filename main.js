@@ -48,6 +48,16 @@ const tuneGenerator = (verseLength, chorusLength, bridgeLength) => {
     
     ${bridgeGenerator(bridgeLength)}
     `
+
 }
 
-console.log(tuneGenerator(5,7,2))
+function generateTune() {
+    event.preventDefault();
+    const verseLength = document.getElementById("verse-length").value;
+    const chorusLength = document.getElementById("chorus-length").value;
+    const bridgeLength = document.getElementById("bridge-length").value;
+  
+    const tune = tuneGenerator(verseLength, chorusLength, bridgeLength);
+  
+    document.getElementById("tune-output").textContent = tune;
+  }
