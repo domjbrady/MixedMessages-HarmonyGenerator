@@ -4,10 +4,10 @@
     font-family: 'Lato', sans-serif;
 }
 body {
-    background-image: url(/media/background.jpg);
+    background-image: url(media/background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position: right;
     opacity: 80%;
     
 }
@@ -82,10 +82,17 @@ button:hover{
 
 }
 
+.x {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 .all-outputs {
     display: flex;
     flex-direction: column;
-
+    width: 66%;
 
     border: 1px solid #ccc;
     border-radius: 6px;
