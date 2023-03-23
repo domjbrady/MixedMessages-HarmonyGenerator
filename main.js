@@ -39,25 +39,29 @@ const bridgeGenerator = (bridgeLength) => {
     return `BRIDGE: ${bridge}`
 }
 
-const tuneGenerator = (verseLength, chorusLength, bridgeLength) => {
-    return `Your Composition:
 
-    ${verseGenerator(verseLength)}
+function generateVerse() {
+    const verseLength = document.getElementById("verse-length").value;
 
-    ${chorusGenerator(chorusLength)}
-    
-    ${bridgeGenerator(bridgeLength)}
-    `
+    const verse = verseGenerator(verseLength);
+    document.getElementById("verse-output").innerHTML = verse;
+}
+function generateChorus() {
+    const chorusLength = document.getElementById("chorus-length").value;
 
+    const chorus = chorusGenerator(chorusLength);
+    document.getElementById("chorus-output").innerHTML = chorus;
+}
+function generateBridge() {
+    const bridgeLength = document.getElementById("bridge-length").value;
+
+    const bridge = bridgeGenerator(bridgeLength);
+    document.getElementById("bridge-output").innerHTML = bridge;
 }
 
-function generateTune() {
+function generateTune(){
     event.preventDefault();
-    const verseLength = document.getElementById("verse-length").value;
-    const chorusLength = document.getElementById("chorus-length").value;
-    const bridgeLength = document.getElementById("bridge-length").value;
-  
-    const tune = tuneGenerator(verseLength, chorusLength, bridgeLength);
-  
-    document.getElementById("tune-output").textContent = tune;
-  }
+    generateVerse();
+    generateChorus()
+    generateBridge();
+}

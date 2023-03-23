@@ -18,11 +18,15 @@
       
         <label for="bridge-length">Bridge Length:</label>
         <input type="number" id="bridge-length" name="bridge-length" required>
-      
-        <button type="submit" onclick="generateTune(event)">Generate Tune</button>
+        <button type="reset">Reset</button>
+        <button onclick="generateTune(event)">Generate Tune</button>
       </form>
 
       <div id="tune-output"></div>
+
+      <p id="verse-output"></p>
+      <p id="chorus-output"></p>
+      <p id="bridge-output"></p>
 
 
   </body>
